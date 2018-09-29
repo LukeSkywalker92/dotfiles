@@ -20,6 +20,8 @@ export PYTHONIOENCODING='UTF-8';
 
 #Only allow pip in venv
 export PIP_REQUIRE_VIRTUALENV=true
+#Dont use standard prompt of virtualenv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';

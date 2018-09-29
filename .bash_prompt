@@ -11,6 +11,15 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
 	export TERM='xterm-256color';
 fi;
 
+promt_venv() {
+	if [[ -n $VIRTUAL_ENV ]]; then
+		echo "(`basename \"$VIRTUAL_ENV\"`) "
+	else
+		return;
+	fi;
+	#echo "bla"
+}
+
 prompt_git() {
 	local s='';
 	local branchName='';
@@ -105,9 +114,12 @@ else
 	hostStyle="${yellow}";
 fi;
 
+
+
 # Set the terminal title and prompt.
 PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
+#PS1+="\[${bold}\]\n"; # newline
+PS1+="\[${cyan}\]\$(promt_venv)"
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
