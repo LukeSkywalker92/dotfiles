@@ -20,6 +20,8 @@ export PYTHONIOENCODING='UTF-8';
 
 #Only allow pip in venv
 export PIP_REQUIRE_VIRTUALENV=true
+#Set dir for virtualenvwrapper
+export WORKON_HOME=~/Coding/python/envs
 #Dont use standard prompt of virtualenv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
