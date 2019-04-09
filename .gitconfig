@@ -185,3 +185,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+
+  email = luke@lukecodewalker.de
+  name = Luke
